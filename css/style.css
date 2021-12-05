@@ -143,8 +143,8 @@ header {
   stroke-linejoin: round;
   stroke-dasharray: 2300;
   stroke-dashoffset: 2300;
-  -webkit-animation: dash 8s linear forwards infinite;
-          animation: dash 8s linear forwards infinite;
+  -webkit-animation: dash 8s linear forwards infinite 4s;
+          animation: dash 8s linear forwards infinite 4s;
 }
 
 @-webkit-keyframes dash {
