@@ -1,5 +1,8 @@
 let date = new Date()
 
+const container = document.getElementById('container')
+const design = document.getElementById('design')
+
 const mouseCursor = document.getElementById('mouseCursor')
 const alphaLogo = document.getElementById('alphaLogo')
 const year = document.getElementById('year')
@@ -7,17 +10,18 @@ const linkedinBtn = document.getElementById('linkedinBtn')
 const linkedText = document.getElementById('linkedText')
 const githubText = document.getElementById('githubText')
 const githubBbtn = document.getElementById('githubBbtn')
-
+const aboutSection = document.getElementById('aboutSection')
 const mailText = document.getElementById('mailText')
+const footerSection = document.getElementById('footerSection')
+const sign = document.getElementById('sign') 
+year.innerText = date.getFullYear()
 
-year.innerText= date.getFullYear()
-
-linkedinBtn.addEventListener('click', ()=>{
-    window.location.href = "https://www.linkedin.com/in/anupamsharmae/"
+linkedinBtn.addEventListener('click', () => {
+    //window.location.href = "https://www.linkedin.com/in/anupamsharmae/"
 })
 
-githubBbtn.addEventListener('click', ()=>{
-    window.location.href = "https://github.com/anupamsharmae"
+githubBbtn.addEventListener('click', () => {
+    //window.location.href = "https://github.com/anupamsharmae"
 })
 
 // alphaLogo.addEventListener('click',()=>{
@@ -34,15 +38,17 @@ githubBbtn.addEventListener('click', ()=>{
 
 // })
 
-if(window.screen.width <= 570){
-    linkedText.classList.remove('text')
-    githubText.classList.remove('text')
-    mailText.classList.remove('text')
-}
-else{
-    linkedText.classList.add('text')
-    githubText.classList.add('text')
-    mailText.classList.add('text')
+window.addEventListener('scroll', (e) => {
+    let value = window.scrollY
+    container.style.top = value * -0.25 + 'px'
+    design.style.top = value * -0.20 + 'px'
 
-}
+    if (value > 200) {
+        aboutSection.classList.add('animate-upwards')
+    }
+    else {
+        aboutSection.classList.remove('animate-upwards')
+    }
+   
+})
 

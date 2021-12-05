@@ -14,8 +14,9 @@ font-family: 'Amita', cursive;
 * {
     //cursor: hidden;
     box-sizing: border-box;
-    transition: all 1s;
+    transition: all 0.5s;
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -83,11 +84,12 @@ header {
 
 .container-card {
     position: relative;
-    padding: 15% 3rem;
+    padding: 10% 3rem;
     text-align: center;
-
+    
 
     .paragraph {
+        position: relative;
         max-width: 60rem;
         margin: auto;
         color: var(--font-disable-color);
@@ -98,9 +100,25 @@ header {
         word-spacing: 2px;
         text-align: left;
         //background-color: var(--card-color);
+        
+    }
 
+    
+}
+.animate-upwards{
+    animation: upwards 1s linear ;
+}
+@keyframes upwards {
+    from{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
+
 
 #Layer_2 {
     width: 35%;
@@ -115,7 +133,7 @@ header {
     stroke-linejoin: round;
     stroke-dasharray: 2300;
     stroke-dashoffset: 2300;
-    animation: dash 10s linear forwards;
+    animation: dash 8s linear forwards infinite;
 }
 
 @keyframes dash {
@@ -145,6 +163,7 @@ hr {
 }
 
 .gray {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     background-color: var(--card-color);
@@ -202,7 +221,7 @@ hr {
     }
 }
 
-.connect-section {
+.footerSection {
     position: relative;
     text-align: center;
     padding: 1rem 1.2rem;
@@ -219,6 +238,11 @@ h2{
 footer {
     //border:5px solid var(--card-color);
     padding-top: 4rem;
+    background-image: url('../assets/footer.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .footer {
@@ -301,7 +325,7 @@ footer {
     }
 
     .container-card {
-        padding: 5rem 1.5rem;
+        padding: 2rem 1.5rem;
 
         .paragraph {
             padding: 1.8rem;
@@ -314,7 +338,7 @@ footer {
         margin-left: 30%;
     }
 
-    .connect-section {
+    .footerSection {
         h2 {
             font-size: 1.5rem;
         }

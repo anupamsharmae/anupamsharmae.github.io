@@ -13,9 +13,10 @@ font-family: 'Amita', cursive;
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -81,11 +82,12 @@ header {
 
 .container-card {
   position: relative;
-  padding: 15% 3rem;
+  padding: 10% 3rem;
   text-align: center;
 }
 
 .container-card .paragraph {
+  position: relative;
   max-width: 60rem;
   margin: auto;
   color: var(--font-disable-color);
@@ -94,6 +96,37 @@ header {
   line-height: 2;
   word-spacing: 2px;
   text-align: left;
+}
+
+.animate-upwards {
+  -webkit-animation: upwards 1s linear;
+          animation: upwards 1s linear;
+}
+
+@-webkit-keyframes upwards {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes upwards {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 #Layer_2 {
@@ -109,8 +142,8 @@ header {
   stroke-linejoin: round;
   stroke-dasharray: 2300;
   stroke-dashoffset: 2300;
-  -webkit-animation: dash 10s linear forwards;
-          animation: dash 10s linear forwards;
+  -webkit-animation: dash 8s linear forwards infinite;
+          animation: dash 8s linear forwards infinite;
 }
 
 @-webkit-keyframes dash {
@@ -150,6 +183,7 @@ hr {
 }
 
 .gray {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +249,7 @@ hr {
   transition: 0.1s ease;
 }
 
-.connect-section {
+.footerSection {
   position: relative;
   text-align: center;
   padding: 1rem 1.2rem;
@@ -231,6 +265,10 @@ h2 {
 
 footer {
   padding-top: 4rem;
+  background-image: url("../assets/footer.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .footer {
@@ -281,7 +319,7 @@ footer {
     margin-bottom: 0;
   }
   .container-card {
-    padding: 5rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
   .container-card .paragraph {
     padding: 1.8rem;
@@ -291,7 +329,7 @@ footer {
     width: 70%;
     margin-left: 30%;
   }
-  .connect-section h2 {
+  .footerSection h2 {
     font-size: 1.5rem;
   }
   .row-footer {
