@@ -8,6 +8,7 @@ font-family: 'Amita', cursive;
   --card-color: #1a1a1a;
   --font-light-color: #ffffff;
   --font-disable-color: #96a5a6;
+  color-scheme: dark light;
 }
 
 * {
