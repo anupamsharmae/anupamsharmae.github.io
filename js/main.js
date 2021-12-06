@@ -13,7 +13,8 @@ const githubBbtn = document.getElementById('githubBbtn')
 const aboutSection = document.getElementById('aboutSection')
 const mailText = document.getElementById('mailText')
 const footerSection = document.getElementById('footerSection')
-const sign = document.getElementById('sign') 
+const sign = document.getElementById('sign')
+
 year.innerText = date.getFullYear()
 
 linkedinBtn.addEventListener('click', () => {
@@ -40,15 +41,35 @@ githubBbtn.addEventListener('click', () => {
 
 window.addEventListener('scroll', (e) => {
     let value = window.scrollY
-    container.style.top = value * -0.25 + 'px'
-    design.style.top = value * -0.20 + 'px'
-
-    if (value > 200) {
+    container.style.transform = `translateY(${value * -0.75}px)`;
+    container.style.transition = `0.2s`;
+    design.style.transform = `translateY(${value * -0.95}px)`;
+    design.style.transition = `0.2s`;
+    if (value > 150) {
         aboutSection.classList.add('animate-upwards')
     }
     else {
         aboutSection.classList.remove('animate-upwards')
     }
-   
 })
 
+
+
+
+function screenWidth() {
+    if (window.matchMedia("(max-width:570px)").matches) {
+        linkedText.classList.remove('text')
+        githubText.classList.remove('text')
+        mailText.classList.remove('text')
+    }
+    else {
+        linkedText.classList.add('text')
+        githubText.classList.add('text')
+        mailText.classList.add('text')
+    }
+
+}
+
+// screenWidth()
+window.addEventListener('resize', screenWidth)
+window.addEventListener('load', screenWidth)

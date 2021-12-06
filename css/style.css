@@ -39,7 +39,6 @@ p {
 
 header {
   position: relative;
-  width: 100%;
   padding: 5rem;
   background-image: url("../assets/bgg.svg");
   background-repeat: no-repeat;
@@ -100,8 +99,8 @@ header {
 }
 
 .animate-upwards {
-  -webkit-animation: upwards 1s linear;
-          animation: upwards 1s linear;
+  -webkit-animation: upwards 0.6s linear;
+          animation: upwards 0.6s linear;
 }
 
 @-webkit-keyframes upwards {
@@ -111,8 +110,8 @@ header {
             transform: translateY(300px);
   }
   to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -124,8 +123,8 @@ header {
             transform: translateY(300px);
   }
   to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -223,31 +222,24 @@ hr {
 }
 
 .card:hover {
-  background-color: orangered;
+  background-color: var(--font-disable-color);
+  -webkit-filter: drop-shadow(1px 3px 15px #000000);
+          filter: drop-shadow(1px 3px 15px #000000);
 }
 
-.social-media-icon {
-  width: 12rem;
-  margin: 0.5rem;
-  padding: 0.8rem 2rem;
-  text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(#ed1c24), to(#f15a24));
-  background: linear-gradient(to right, #ed1c24, #f15a24);
-  font-weight: 600;
-  border-radius: 5rem;
-  cursor: pointer;
+.card:hover > .social-icons {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
-.social-media-icon:hover {
-  -webkit-filter: drop-shadow(1px 1px 10px black);
-          filter: drop-shadow(1px 1px 10px black);
+.card:hover > p {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
-.social-media-icon:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-  -webkit-transition: 0.1s ease;
-  transition: 0.1s ease;
+.social-icons {
+  width: 40px;
+  height: 40px;
 }
 
 .footerSection {
@@ -338,7 +330,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 2rem auto;
+    margin: 2rem;
   }
   .card {
     display: -webkit-box;
@@ -349,8 +341,14 @@ footer {
             align-items: center;
     border-radius: 0.5rem;
   }
-  .card svg {
-    margin: auto 2rem;
+  .card p {
+    margin: auto;
+    font-size: 0.85rem;
+  }
+  .social-icons {
+    width: 20px;
+    height: 20px;
+    margin: 0 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
