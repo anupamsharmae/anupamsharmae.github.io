@@ -9,7 +9,6 @@ font-family: 'Amita', cursive;
     --card-color: #1a1a1a;
     --font-light-color: #ffffff;
     --font-disable-color: /*#96a5a6*/ #d6dfff;
-    //color-scheme: dark light;
 }
 
 * {
@@ -24,8 +23,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    //background-color: var(--main-bg-color);
-    //color: var(--font-light-color);
+    background-color: var(--main-bg-color);
+    color: var(--font-light-color);
     user-select: none;
     overflow-x: hidden;
 }
@@ -41,7 +40,7 @@ header {
     background-image: url('../assets/bgg.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position:left;
     //filter: drop-shadow(1px 15px 10px #000000ab);
 
 }
@@ -195,14 +194,12 @@ hr {
 
 .card {
     margin: 0.5rem;
-    border: 1px solid var(--card-color);
     background-color: var(--card-color);
     padding: 1rem 1.2rem;
     border-radius: 50%;
 
     &:hover {
         background-color: var(--font-disable-color);
-        
         filter: drop-shadow(1px 3px 15px #000000);
     }
 
@@ -218,6 +215,7 @@ hr {
 .social-icons {
     width: 40px;
     height: 40px;
+    padding: 5px;
 }
 
 .footerSection {
@@ -366,5 +364,6 @@ footer {
         width: 20px;
         height: 20px;
         margin: 0 1rem;
+        padding: 0;
     }
 }

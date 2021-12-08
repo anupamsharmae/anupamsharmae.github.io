@@ -23,6 +23,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--font-light-color);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -40,7 +42,7 @@ header {
   background-image: url("../assets/bgg.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: left;
 }
 
 .container {
@@ -212,7 +214,6 @@ hr {
 
 .card {
   margin: 0.5rem;
-  border: 1px solid var(--card-color);
   background-color: var(--card-color);
   padding: 1rem 1.2rem;
   border-radius: 50%;
@@ -237,6 +238,7 @@ hr {
 .social-icons {
   width: 40px;
   height: 40px;
+  padding: 5px;
 }
 
 .footerSection {
@@ -346,6 +348,7 @@ footer {
     width: 20px;
     height: 20px;
     margin: 0 1rem;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
