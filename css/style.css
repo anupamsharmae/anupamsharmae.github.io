@@ -8,7 +8,6 @@ font-family: 'Amita', cursive;
   --card-color: #1a1a1a;
   --font-light-color: #ffffff;
   --font-disable-color: /*#96a5a6*/ #d6dfff;
-  color-scheme: dark light;
 }
 
 * {
@@ -24,8 +23,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: var(--main-bg-color);
-  color: var(--font-light-color);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
