@@ -24,7 +24,7 @@ font-family: 'Amita', cursive;
   --bg-color: var(--bg-light-color);
   --font-color: var(--font-dark-color);
   --secondary-color: var(--disable-color);
-  --card-color: var(--card-light-color);
+  --card-color: var(--disable-color);
 }
 
 * {
@@ -112,6 +112,35 @@ header {
   line-height: 2;
   word-spacing: 2px;
   text-align: left;
+  background-color: var(--bg-color);
+}
+
+.container-card .paragraph::before {
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  left: -5px;
+  width: 10rem;
+  height: 50px;
+  background-color: #d6dfff;
+  border-radius: 0.8rem;
+  z-index: -1;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container-card .paragraph::after {
+  position: absolute;
+  content: '';
+  top: -5px;
+  right: -5px;
+  width: 10rem;
+  height: 50px;
+  background-color: #d6dfff;
+  border-radius: 0.8rem;
+  z-index: -1;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .animate-upwards {
@@ -153,7 +182,7 @@ header {
 
 .svg {
   fill: none;
-  stroke: #fff;
+  stroke: var(--font-color);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 2300;
@@ -175,7 +204,9 @@ header {
 }
 
 .highlight {
-  color: var(--font-color);
+  color: var(--disable-color);
+  -webkit-filter: invert(40%);
+          filter: invert(40%);
 }
 
 hr {
@@ -257,6 +288,8 @@ hr {
   width: 40px;
   height: 40px;
   padding: 5px;
+  -webkit-filter: invert(40%);
+          filter: invert(40%);
 }
 
 .footerSection {
