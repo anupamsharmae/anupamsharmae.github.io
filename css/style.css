@@ -266,12 +266,14 @@ hr {
   background-color: var(--card-color);
   padding: 1rem 1.2rem;
   border-radius: 50%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .card:hover {
   background-color: var(--secondary-color);
-  -webkit-filter: drop-shadow(1px 3px 15px #000000);
-          filter: drop-shadow(1px 3px 15px #000000);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .card:hover > .social-icons {
@@ -280,8 +282,8 @@ hr {
 }
 
 .card:hover > p {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  -webkit-filter: invert(80%);
+          filter: invert(80%);
 }
 
 .social-icons {

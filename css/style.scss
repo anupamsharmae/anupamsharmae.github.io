@@ -238,11 +238,11 @@ hr {
     background-color: var(--card-color);
     padding: 1rem 1.2rem;
     border-radius: 50%;
-
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   
     &:hover {
         background-color: var(--secondary-color);
-        filter: drop-shadow(1px 3px 15px #000000);
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         
     }
 
@@ -251,7 +251,7 @@ hr {
     }
 
     &:hover > p{
-        filter:invert(100%);
+        filter:invert(80%);
     }
 }
 
