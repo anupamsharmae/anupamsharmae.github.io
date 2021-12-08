@@ -25,13 +25,9 @@ githubBbtn.addEventListener('click', () => {
     //window.location.href = "https://github.com/anupamsharmae"
 })
 
-// alphaLogo.addEventListener('click',()=>{
-//     if(!alphaLogo.classList.contains('color-change'))
-//         alphaLogo.classList.add('color-change')
-//     else
-//         alphaLogo.classList.remove('color-change')
-
-// })
+alphaLogo.addEventListener('click',()=>{
+  document.body.classList.toggle('light-theme')
+})
 
 // window.addEventListener('mousemove', (e)=>{
 //     mouseCursor.style.left = `${e.pageX}px`

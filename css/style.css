@@ -4,10 +4,27 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Amita', cursive;
 */
 :root {
-  --main-bg-color: #000000;
-  --card-color: #1a1a1a;
+  --bg-dark-color: #000000;
+  --bg-light-color:#fcfeff;
+  --card-dark-color: #1a1a1a;
+  --card-light-color: #d8dff1;
   --font-light-color: #ffffff;
-  --font-disable-color: /*#96a5a6*/ #d6dfff;
+  --font-dark-color:#303030;
+  --disable-color: /*#96a5a6*/ #d6dfff;
+}
+
+.dark-theme {
+  --bg-color: var(--bg-dark-color);
+  --font-color: var(--font-light-color);
+  --secondary-color: var(--disable-color);
+  --card-color: var(--card-dark-color);
+}
+
+.light-theme {
+  --bg-color: var(--bg-light-color);
+  --font-color: var(--font-dark-color);
+  --secondary-color: var(--disable-color);
+  --card-color: var(--card-light-color);
 }
 
 * {
@@ -23,8 +40,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: var(--main-bg-color);
-  color: var(--font-light-color);
+  background-color: var(--bg-color);
+  color: var(--font-color);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -89,7 +106,7 @@ header {
   position: relative;
   max-width: 60rem;
   margin: auto;
-  color: var(--font-disable-color);
+  color: var(--font-color);
   padding: 2rem 3rem;
   border-radius: 0.8rem;
   line-height: 2;
@@ -158,11 +175,11 @@ header {
 }
 
 .highlight {
-  color: var(--font-light-color);
+  color: var(--font-color);
 }
 
 hr {
-  width: 40%;
+  width: 50%;
   background: -webkit-gradient(linear, left top, right top, from(#ed1c24), to(#f15a24));
   background: linear-gradient(to right, #ed1c24, #f15a24);
   height: 0.4rem;
@@ -191,7 +208,7 @@ hr {
           justify-content: space-evenly;
   background-color: var(--card-color);
   border-radius: 0.8rem;
-  color: var(--font-disable-color);
+  color: var(--font-color);
   padding: 0.8rem;
   max-width: 70rem;
   margin: auto;
@@ -209,10 +226,11 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .card {
+  position: relative;
   margin: 0.5rem;
   background-color: var(--card-color);
   padding: 1rem 1.2rem;
@@ -220,7 +238,7 @@ hr {
 }
 
 .card:hover {
-  background-color: var(--font-disable-color);
+  background-color: var(--secondary-color);
   -webkit-filter: drop-shadow(1px 3px 15px #000000);
           filter: drop-shadow(1px 3px 15px #000000);
 }
@@ -276,7 +294,7 @@ footer {
 .footer p {
   margin: auto;
   font-size: 12px;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 .footer #year {
@@ -329,7 +347,6 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 2rem;
   }
   .card {
     display: -webkit-box;
